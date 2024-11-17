@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out; /* Adding transition for smooth effects */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?cs=srgb&dl=pexels-jplenio-1118873.jpg&fm=jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 2s ease-in-out; /* Fade-in effect for the entire body */
+}
+
+.container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    width: 350px;
+    max-width: 90%;
+    animation: slideInUp 1s ease-out; /* Slide-in effect from the bottom */
+}
+
+.header h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    font-family: 'Helvetica', sans-serif;
+    color: #f5f5dc;
+    font-weight: bold;
+    animation: fadeInUp 1.5s ease-in-out; /* Fade-in and slide-up effect */
+}
+
+.input-section input {
+    width: 80%;
+    padding: 12px;
+    margin-right: 10px;
+    border: 2px solid #0066cc;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #333;
+    font-size: 1.1em;
+    transition: border-color 0.3s ease-in-out; /* Smooth border color change */
+}
+
+.input-section input:focus {
+    border-color: #ff6600; /* Change border color on focus */
+    outline: none;
+}
+
+.input-section button {
+    padding: 12px;
+    background-color: #0066cc;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1.2em;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Adding hover effect */
+}
+
+.input-section button:hover {
+    background-color: #005bb5;
+    transform: scale(1.1); /* Button grows on hover */
+}
+
+.weather-info p {
+    margin: 15px 0;
+    font-size: 1.4em;
+    font-weight: 500;
+    opacity: 0;
+    animation: fadeInUp 2s forwards 1s; /* Fade-in and slide-up effect with a delay */
+}
+
+#weatherIcon img {
+    width: 60px;
+    height: 60px;
+    margin: 20px 0;
+    opacity: 0;
+    animation: fadeInUp 1.5s forwards 1s; /* Fade-in and slide-up for icons */
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
